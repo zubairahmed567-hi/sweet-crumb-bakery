@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sweet Crumbs Bakery – Handcrafted cakes, pastries, cupcakes and artisan breads baked fresh daily with love in Karachi." />
+  <meta name="keywords" content="bakery, cakes, cupcakes, pastries, artisan bread, custom cakes, Karachi" />
+  <meta name="author" content="Sweet Crumbs Bakery" />
+  <title>Sweet Crumbs Bakery – Baked with Love</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== LOADING SCREEN ========== -->
+  <div id="loading-screen" role="status" aria-label="Loading">
+    <div class="loader-logo">Sweet <span>Crumbs</span></div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <!-- ========== SCROLL TO TOP ========== -->
+  <button id="scroll-top" aria-label="Scroll back to top">↑</button>
+
+  <!-- ========== NAVBAR ========== -->
+  <header>
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+      <div class="nav-inner">
+
+        <!-- Logo -->
+        <a href="index.html" class="nav-logo" aria-label="Sweet Crumbs Bakery – Home">
+          <div class="nav-logo-icon" aria-hidden="true">🧁</div>
+          <div class="nav-logo-text">
+            Sweet Crumbs
+            <small>Bakery</small>
+          </div>
+        </a>
+
+        <!-- Desktop Links -->
+        <ul class="nav-links" role="list">
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          
+        </ul>
+
+        <!-- Hamburger Button -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="mobile-menu" role="navigation" aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        
+      </div>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO SECTION ========== -->
+<section class="hero" id="hero" aria-labelledby="hero-heading">
+  <div class="hero-inner">
+
+    <!-- Text Content -->
+    <div class="hero-content">
+      <div class="hero-badge">🎂 Est. 2016 · Karachi, Pakistan</div>
+
+      <h1 class="hero-title" id="hero-heading">
+        Baked with
+        <em>Love</em>
+        <span class="line-break">Every Single Day</span>
+      </h1>
+
+      <p class="hero-desc">
+        Handcrafted cakes, artisan breads and delicate pastries made fresh
+        daily using time-honoured recipes and the finest ingredients.
+      </p>
+
+      <div class="hero-btns">
+       
+        <a href="menu.html" class="btn btn-outline">View Menu</a>
+      </div>
+
+      <!-- Stats -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num" data-target="8" data-suffix="+">0+</div>
+          <div class="stat-label">Years Baking</div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-num" data-target="150" data-suffix="+">0+</div>
+          <div class="stat-label">Menu Items</div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-num" data-target="5000" data-suffix="+">0+</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+      </div>
+    </div>
+    <!-- /hero-content -->
+
+
+    <!-- Visual -->
+    <div class="hero-visual" aria-hidden="true">
+
+      <!-- Video -->
+      <div class="hero-video-wrap">
+        <video autoplay muted loop playsinline class="hero-video">
+          <source src="assets/video.crdownload" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="hero-float-1"><span>⭐</span>5-Star Rated</div>
+      <div class="hero-float-2"><span>🕐</span>Fresh Daily</div>
+      <div class="hero-float-3"><span>🚚</span>Free Delivery</div>
+
+    </div>
+
+  </div>
+  <!-- /hero-inner -->
+
+  <div class="scroll-indicator" aria-hidden="true">Scroll</div>
+</section>
+
+
+
+    <!-- ========== MARQUEE STRIP ========== -->
+    <div class="marquee-strip" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item">Custom Cakes</span>
+        <span class="marquee-item">Fresh Pastries</span>
+        <span class="marquee-item">Artisan Bread</span>
+        <span class="marquee-item">Cupcakes</span>
+        <span class="marquee-item">Cookies</span>
+        <span class="marquee-item">Wedding Cakes</span>
+        <span class="marquee-item">Birthday Cakes</span>
+        <span class="marquee-item">Macarons</span>
+        <span class="marquee-item">Danish Pastries</span>
+        <span class="marquee-item">Sourdough Bread</span>
+        <!-- duplicated by JS for seamless loop -->
+      </div>
+    </div>
+
+    <!-- ========== FEATURED PRODUCTS ========== -->
+    <section class="featured section-pad" id="featured" aria-labelledby="featured-heading">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-subtitle">Our Specialties</span>
+          <h2 class="section-title" id="featured-heading">Freshly Baked, Daily</h2>
+          <p class="section-desc">From celebration cakes to everyday treats — everything is made from scratch with premium ingredients.</p>
+        </div>
+
+        <div class="products-grid">
+
+          <!-- Card 1 -->
+          <article class="product-card reveal delay-1">
+            <div class="product-img">
+              <span class="product-badge">Bestseller</span>
+              <span aria-hidden="true"><img src="assets/choclate triffle.jpg"></span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-name">Chocolate Truffle Cake</h3>
+              <p class="product-desc">Rich dark chocolate layers with silky ganache and fresh truffle shavings.</p>
+              <div class="product-footer">
+                <div class="product-price">PKR 2,500 <span>/ whole</span></div>
+                <button class="product-add" aria-label="Add Chocolate Truffle Cake to cart">+</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="product-card reveal delay-2">
+            <div class="product-img">
+              <span class="product-badge">Popular</span>
+              <span aria-hidden="true"><img src="assets/Red Velvet Cupcakes.jpg"></span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-name">Vanilla Cupcakes</h3>
+              <p class="product-desc">Fluffy vanilla sponge topped with swirled buttercream and sprinkles.</p>
+              <div class="product-footer">
+                <div class="product-price">PKR 180 <span>/ piece</span></div>
+                <button class="product-add" aria-label="Add Vanilla Cupcakes to cart">+</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="product-card reveal delay-3">
+            <div class="product-img">
+              <span aria-hidden="true"><img src="assets/Butter Cookies.jpg"></span>
+             
+            </div>
+            <div class="product-body">
+              <h3 class="product-name">Butter Cookies</h3>
+              <p class="product-desc">Crisp, melt‑in‑your‑mouth cookies made with pure butter and vanilla.</p>
+              <div class="product-footer">
+                <div class="product-price">PKR 120 <span>/ 6 pcs</span></div>
+                <button class="product-add" aria-label="Add Butter Cookies to cart">+</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="product-card reveal delay-4">
+            <div class="product-img">
+              <span class="product-badge">Artisan</span>
+              <span aria-hidden="true"><img src="assets/Classic-Sourdough.jpg"></span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-name">Sourdough Bread</h3>
+              <p class="product-desc">Slow‑fermented, crispy crust with a chewy, airy interior. Baked at dawn.</p>
+              <div class="product-footer">
+                <div class="product-price">PKR 650 <span>/ loaf</span></div>
+                <button class="product-add" aria-label="Add Sourdough Bread to cart">+</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="product-card reveal delay-1">
+            <div class="product-img">
+              <span class="product-badge">Fresh</span>
+              <span aria-hidden="true"><img src="assets/Butter-Croissant.jpg"></span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-name">Butter Croissant</h3>
+              <p class="product-desc">Flaky, golden‑layered croissants made with 100% European butter.</p>
+              <div class="product-footer">
+                <div class="product-price">PKR 250 <span>/ piece</span></div>
+                <button class="product-add" aria-label="Add Butter Croissant to cart">+</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="product-card reveal delay-2">
+            <div class="product-img">
+              <span aria-hidden="true"><img src="assets/download.jpg"></span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-name">Red Velvet Cake</h3>
+              <p class="product-desc">Classic red velvet layers with cream cheese frosting and walnut crumble.</p>
+              <div class="product-footer">
+                <div class="product-price">PKR 2,800 <span>/ whole</span></div>
+                <button class="product-add" aria-label="Add Red Velvet Cake to cart">+</button>
+              </div>
+
+            </div>
+          </article>
+
+        </div><!-- /products-grid -->
+
+        <div style="text-align:center;margin-top:3rem;">
+          <a href="menu.html" class="btn btn-gold reveal">Explore Full Menu →</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== BROWSE BY CATEGORY ========== -->
+    <section class="categories section-pad" id="categories" aria-labelledby="cats-heading">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-subtitle">Browse By Type</span>
+          <h2 class="section-title" id="cats-heading">What Are You Craving?</h2>
+        </div>
+
+        <div class="cats-grid">
+          <div class="cat-card reveal delay-1" data-filter="cakes" role="button" tabindex="0" aria-label="Browse Cakes">
+            <span class="cat-icon" aria-hidden="true"><img src="assets/Black Forest Cake.jpg"></span>
+            <div class="cat-name">Cakes</div>
+            <div class="cat-count">24 items</div>
+          </div>
+          <div class="cat-card reveal delay-2" data-filter="cupcakes" role="button" tabindex="0" aria-label="Browse Cupcakes">
+            <span class="cat-icon" aria-hidden="true"><img src="assets/Chocolate Fudge Cupcakes.jpg"></span>
+            <div class="cat-name">Cupcakes</div>
+            <div class="cat-count">18 items</div>
+          </div>
+          <div class="cat-card reveal delay-3" data-filter="cookies" role="button" tabindex="0" aria-label="Browse Cookies">
+            <span class="cat-icon" aria-hidden="true"><img src="assets/Chocolate-Chip-Cookies.jpg"></span>
+            <div class="cat-name">Cookies</div>
+            <div class="cat-count">32 items</div>
+          </div>
+          <div class="cat-card reveal delay-4" data-filter="bread" role="button" tabindex="0" aria-label="Browse Bread">
+            <span class="cat-icon" aria-hidden="true"><img src="assets/Cinnamon Raisin Bread.jpg"></span>
+            <div class="cat-name">Bread</div>
+            <div class="cat-count">15 items</div>
+          </div>
+          <div class="cat-card reveal delay-1" data-filter="pastries" role="button" tabindex="0" aria-label="Browse Pastries">
+            <span class="cat-icon" aria-hidden="true"><img src="assets/pastries.jpg"></span>
+            <div class="cat-name">Pastries</div>
+            <div class="cat-count">28 items</div>
+          </div>
+          <div class="cat-card reveal delay-2" data-filter="all" role="button" tabindex="0" aria-label="View All Products">
+            <span class="cat-icon" aria-hidden="true">✨</span>
+            <div class="cat-name">View All</div>
+            <div class="cat-count">117 items</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== ABOUT PREVIEW ========== -->
+    <section class="about section-pad" id="about-preview" aria-labelledby="about-prev-heading">
+      <div class="container">
+        <div class="about-inner">
+
+          <!-- Image Grid -->
+          <div class="about-img-grid reveal-left">
+            <div class="about-img-main" aria-hidden="true"><img src="assets/baker1.jpg" alt=""></div>
+            <div class="about-img-sm" aria-hidden="true"><img src="assets/chef.jpg" alt=""></div>
+            <div class="about-img-sm" aria-hidden="true"><img src="assets/cookie.jpg" alt=""></div>
+            <div class="about-badge-float">
+              <strong>8+</strong>
+              <span>Years of Baking Bliss</span>
+            </div>
+          </div>
+
+          <!-- Text -->
+          <div class="about-content reveal-right">
+            <span class="section-subtitle">Our Story</span>
+            <h2 class="section-title" id="about-prev-heading">Crafted with Passion, Served with Love</h2>
+            <p style="color:var(--text-mid);margin-bottom:1.5rem;font-size:.96rem;line-height:1.9;">
+              Sweet Crumbs Bakery was born in 2016 from a simple dream — to bring the warmth of a home kitchen
+              to every corner of Karachi. What started as weekend pastries for neighbours grew into one of the
+              city's most beloved artisan bakeries.
+            </p>
+            <p style="color:var(--text-light);margin-bottom:2rem;font-size:.92rem;line-height:1.9;">
+              Every product is handmade by our passionate bakers using locally sourced ingredients and time‑honoured
+              recipes. No shortcuts. No preservatives. Just pure, honest baking.
+            </p>
+
+            <div class="about-features">
+              <div class="about-feat-item">
+                <div class="about-feat-icon" aria-hidden="true">🌾</div>
+                <div>
+                  <div class="about-feat-title">Natural Ingredients</div>
+                  <div class="about-feat-desc">No artificial flavours or preservatives</div>
+                </div>
+              </div>
+              <div class="about-feat-item">
+                <div class="about-feat-icon" aria-hidden="true">⏰</div>
+                <div>
+                  <div class="about-feat-title">Baked Fresh Daily</div>
+                  <div class="about-feat-desc">Prepared every morning at 4 AM</div>
+                </div>
+              </div>
+              <div class="about-feat-item">
+                <div class="about-feat-icon" aria-hidden="true">❤️</div>
+                <div>
+                  <div class="about-feat-title">Made with Love</div>
+                  <div class="about-feat-desc">Every item crafted by hand</div>
+                </div>
+              </div>
+              <div class="about-feat-item">
+                <div class="about-feat-icon" aria-hidden="true">🏆</div>
+                <div>
+                  <div class="about-feat-title">Award‑Winning</div>
+                  <div class="about-feat-desc">Best Bakery Karachi 2023</div>
+                </div>
+              </div>
+            </div>
+
+            <a href="about.html" class="btn btn-primary">Our Full Story →</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="testimonials section-pad" id="testimonials" aria-labelledby="testi-heading">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-subtitle">Happy Customers</span>
+          <h2 class="section-title" id="testi-heading">What They're Saying</h2>
+          <p class="section-desc">Thousands of satisfied customers can't stop smiling after every sweet bite.</p>
+        </div>
+
+        <div class="testimonials-slider reveal">
+          <div class="testimonials-track">
+
+            <!-- Slide 1 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="testimonial-text">
+                  "The custom birthday cake for my daughter was breathtaking — it looked stunning and tasted
+                  even better. Sweet Crumbs will always be our go‑to bakery!"
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-avatar" aria-hidden="true">A</div>
+                  <div>
+                    <div class="author-name">Ayesha Raza</div>
+                    <div class="author-role">Mother &amp; Loyal Customer</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="testimonial-text">
+                  "I order their sourdough every week without fail. Perfect crust, soft inside, amazing
+                  flavour — the best artisan bread in Karachi. Highly recommended!"
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-avatar" aria-hidden="true">O</div>
+                  <div>
+                    <div class="author-name">Omar Farooq</div>
+                    <div class="author-role">Food Blogger, Karachi Eats</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="testimonial-text">
+                  "Our office ordered croissants for a corporate event and the feedback was incredible.
+                  Professional, on‑time, and truly delicious. We'll definitely order again!"
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-avatar" aria-hidden="true">S</div>
+                  <div>
+                    <div class="author-name">Sara Khan</div>
+                    <div class="author-role">HR Manager, Tech Firm</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="testimonial-text">
+                  "Their red velvet cake for our anniversary was a dream. Light frosting, not too sweet.
+                  Every guest asked where we ordered from. Sweet Crumbs is pure magic!"
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-avatar" aria-hidden="true">Z</div>
+                  <div>
+                    <div class="author-name">Zara &amp; Bilal</div>
+                    <div class="author-role">Anniversary Couple</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /testimonials-track -->
+
+          <!-- Controls -->
+          <div class="slider-controls">
+            <button class="slider-btn prev" aria-label="Previous testimonial">←</button>
+            <div class="slider-dots" role="tablist" aria-label="Testimonial navigation">
+              <button class="slider-dot active" role="tab" aria-label="Testimonial 1" aria-selected="true"></button>
+              <button class="slider-dot" role="tab" aria-label="Testimonial 2" aria-selected="false"></button>
+              <button class="slider-dot" role="tab" aria-label="Testimonial 3" aria-selected="false"></button>
+              <button class="slider-dot" role="tab" aria-label="Testimonial 4" aria-selected="false"></button>
+            </div>
+            <button class="slider-btn next" aria-label="Next testimonial">→</button>
+          </div>
+
+        </div><!-- /testimonials-slider -->
+      </div>
+    </section>
+
+    <!-- ========== GALLERY PREVIEW / INSTAGRAM FEED ========== -->
+    <section class="gallery-section section-pad" id="gallery-preview" aria-labelledby="gallery-prev-heading">
+      <div class="container">
+     
+        <div class="section-header reveal">
+          <span class="section-subtitle">Instagram Feed</span>
+          <h2 class="section-title" id="gallery-prev-heading">Sweet Moments, Captured</h2>
+          <p class="section-desc">Follow our journey of daily bakes, custom orders and behind‑the‑scenes magic.</p>
+        </div>
+
+        <div class="gallery-grid reveal">
+          <div class="gallery-item" data-emoji="" tabindex="0" aria-label="Open: Custom chocolate cake" role="button"><img src="assets/download.jpg" alt=""></div>
+          <div class="gallery-item" data-emoji="🧁" tabindex="0" aria-label="Open: Cupcake platter" role="button"><img src="assets/Chocolate Fudge Cupcakes.jpg" alt=""></div>
+          <div class="gallery-item" data-emoji="🍪" tabindex="0" aria-label="Open: Fresh cookies" role="button"><img src="assets/cookie.jpg" alt=""></div>
+          <div class="gallery-item" data-emoji="🍞" tabindex="0" aria-label="Open: Sourdough loaves" role="button"><img src="assets/Classic-Sourdough.jpg" alt=""></div>
+          <div class="gallery-item" data-emoji="🥐" tabindex="0" aria-label="Open: Butter croissants" role="button"><img src="assets/Butter-Croissant.jpg" alt=""></div>
+          <div class="gallery-item" data-emoji="💒" tabindex="0" aria-label="Open: Wedding cake" role="button"><img src="assets/white.jpg" alt=""></div>
+          <div class="gallery-item" data-emoji="🍰" tabindex="0" aria-label="Open: Strawberry tart" role="button"><img src="assets/download.jpg" alt=""></div>
+          <div class="gallery-item" data-emoji="✨" tabindex="0" aria-label="Open: Pastry display" role="button"><img src="assets/pastries.jpg" alt=""></div>
+        </div>
+
+        <div style="text-align:center;margin-top:2.5rem;">
+          <a href="gallery.html" class="btn btn-outline reveal">View Full Gallery →</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Lightbox (shared) -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+      <button class="lightbox-close" aria-label="Close lightbox">✕</button>
+      <div class="lightbox-content"></div>
+    </div>
+
+    <!-- ========== NEWSLETTER ========== -->
+    <section class="newsletter section-pad-sm" id="newsletter" aria-labelledby="newsletter-heading">
+      <div class="newsletter-inner">
+        <span class="section-subtitle">Stay in the Loop</span>
+        <h2 class="section-title" id="newsletter-heading">Get Sweet Deals in Your Inbox</h2>
+        <p class="section-desc">Subscribe for exclusive offers, new arrivals, seasonal specials and early‑bird discounts.</p>
+        <form class="newsletter-form" id="newsletter-form" novalidate aria-label="Newsletter subscription">
+          <input type="email" class="newsletter-input" placeholder="Your email address" aria-label="Email address" required />
+          <button type="submit" class="btn btn-gold">Subscribe 🎉</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+
+        <!-- Brand -->
+        <div>
+          <a href="index.html" class="nav-logo" style="display:inline-flex;gap:10px;align-items:center;margin-bottom:1rem;" aria-label="Sweet Crumbs Bakery">
+            <div class="nav-logo-icon" style="width:38px;height:38px;" aria-hidden="true">🧁</div>
+            <div class="nav-logo-text">Sweet Crumbs <small>Bakery</small></div>
+          </a>
+          <p class="footer-brand-desc">Handcrafted baked goods made fresh daily with love, premium ingredients and a whole lot of passion. Serving Karachi since 2016.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">f</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="TikTok">♪</a>
+            <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="footer-col-title">Quick Links</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="order.html">Custom Order</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Products -->
+        <div>
+          <h3 class="footer-col-title">Our Products</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="menu.html?cat=cakes">Cakes</a></li>
+            <li><a href="menu.html?cat=cupcakes">Cupcakes</a></li>
+            <li><a href="menu.html?cat=cookies">Cookies</a></li>
+            <li><a href="menu.html?cat=bread">Artisan Bread</a></li>
+            <li><a href="menu.html?cat=pastries">Pastries</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="footer-col-title">Visit Us</h3>
+          <address class="footer-hours" style="font-style:normal;">
+            <p><strong>Address:</strong><br/>Shop 12, Bahadurabad, Karachi</p>
+            <p><strong>Phone:</strong><br/><a href="tel:+923001234567" style="color:var(--gold-light);">+92 300 123 4567</a></p>
+            <p><strong>Email:</strong><br/><a href="mailto:hello@sweetcrumbs.pk" style="color:var(--gold-light);">hello@sweetcrumbs.pk</a></p>
+            <p><strong>Hours:</strong><br/>Mon–Sat: 8 AM – 9 PM<br/>Sunday: 9 AM – 7 PM</p>
+          </address>
+        </div>
+
+      </div><!-- /footer-top -->
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;width:100%;">
+        <p>© 2024 Sweet Crumbs Bakery. All rights reserved.</p>
+        <p>Made with ❤️ in Karachi</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

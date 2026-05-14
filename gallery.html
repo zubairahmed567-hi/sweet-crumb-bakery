@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse the Sweet Crumbs Bakery photo gallery – custom cakes, pastries, breads and behind-the-scenes baking moments in Karachi." />
+  <meta name="author" content="Sweet Crumbs Bakery" />
+  <title>Gallery – Sweet Crumbs Bakery</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== LOADING SCREEN ========== -->
+  <div id="loading-screen" role="status" aria-label="Loading">
+    <div class="loader-logo">Sweet <span>Crumbs</span></div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <!-- ========== SCROLL TO TOP ========== -->
+  <button id="scroll-top" aria-label="Scroll back to top">↑</button>
+
+  <!-- ========== NAVBAR ========== -->
+  <header>
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+      <div class="nav-inner">
+
+        <!-- Logo -->
+        <a href="index.html" class="nav-logo" aria-label="Sweet Crumbs Bakery – Home">
+          <div class="nav-logo-icon" aria-hidden="true">🧁</div>
+          <div class="nav-logo-text">
+            Sweet Crumbs
+            <small>Bakery</small>
+          </div>
+        </a>
+
+        <!-- Desktop Links -->
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html"class="active" aria-current="page">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          
+        </ul>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="mobile-menu" role="navigation" aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html" class="active" aria-current="page">Gallery</a></li>
+        <a href="contact.html">Contact</a>
+       
+      </div>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="page-hero" aria-label="Gallery page hero"><img src="assets/c.jpg" style="width: 100%; height: 550px;">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">Gallery</span>
+        </nav>
+        <h1 class="page-hero-title">Sweet Moments Gallery</h1>
+        <p class="page-hero-desc">Every photo tells a story of passion, craftsmanship and the joy of extraordinary baking.</p>
+      </div>
+    </section>
+
+    <!-- ========== MAIN GALLERY ========== -->
+    <section class="gallery-section section-pad" id="gallery" aria-labelledby="gallery-heading">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-subtitle">Our Portfolio</span>
+          <h2 class="section-title" id="gallery-heading">Baked with Heart, Captured with Pride</h2>
+          <p class="section-desc">Click any image to open a full preview. Each creation is one of a kind.</p>
+        </div>
+
+        <!-- Main Gallery Grid — 4-column masonry -->
+        <div class="gallery-grid reveal" role="list" aria-label="Bakery photo gallery">
+
+          <!-- Item 1: spans 2×2 (large feature) -->
+<div class="gallery-item" data-emoji="🍰" role="listitem" tabindex="0"
+               aria-label="Open:Cupcake display tower"><img src="assets/white.jpg" alt=""></div>
+          <!-- Item 2 -->
+          <div class="gallery-item" data-emoji="🧁" role="listitem" tabindex="0"
+               aria-label="Open: Cupcake display tower"><img src="assets/Chocolate Fudge Cupcakes.jpg" alt=""></div>
+
+          <!-- Item 3 -->
+          <div class="gallery-item" data-emoji="🍞" role="listitem" tabindex="0"
+               aria-label="Open: Artisan sourdough collection"><img src="assets/Classic-Sourdough.jpg" alt=""></div>
+
+          <!-- Item 4 -->
+          <div class="gallery-item" data-emoji="🥐" role="listitem" tabindex="0"
+               aria-label="Open: Golden butter croissants"><img src="assets/Butter-Croissant.jpg" alt=""></div>
+
+          <!-- Item 5: spans 2 columns -->
+          <div class="gallery-item" data-emoji="🍰" role="listitem" tabindex="0"
+               aria-label="Open: Strawberry cake slice"><img src="assets/download.jpg" alt=""></div>
+
+          <!-- Item 6 -->
+          <div class="gallery-item" data-emoji="🍪" role="listitem" tabindex="0"
+               aria-label="Open: Cookie jar collection"><img src="assets/cookie.jpg" alt=""></div>
+
+          <!-- Item 7 -->
+          <div class="gallery-item" data-emoji="💒" role="listitem" tabindex="0"
+               aria-label="Open: White fondant wedding cake"><img src="assets/white.jpg" alt=""></div>
+
+          <!-- Item 8 -->
+          <div class="gallery-item" data-emoji="🫐" role="listitem" tabindex="0"
+               aria-label="Open: Blueberry tart"><img src="assets/Fresh Fruit Tart.jpg" alt=""></div>
+
+          <!-- Item 9 -->
+          <div class="gallery-item" data-emoji="🎂" role="listitem" tabindex="0"
+               aria-label="Open: Birthday cake with candles"><img src="assets/birthday cake.jpg" alt=""></div>
+
+          <!-- Item 10 -->
+          <div class="gallery-item" data-emoji="🥖" role="listitem" tabindex="0"
+               aria-label="Open: Assorted bread display"><img src="assets/n.jpg" alt=""></div>
+
+          <!-- Item 11 -->
+          <div class="gallery-item" data-emoji="👩‍🍳" role="listitem" tabindex="0"
+               aria-label="Open: Chef decorating a cake"><img src="assets/che.jpg" alt=""></div>
+
+          <!-- Item 12 -->
+          <div class="gallery-item" data-emoji="✨" role="listitem" tabindex="0"
+               aria-label="Open: Pastel macaron tower"><img src="assets/m.jpg" alt=""></div>
+
+        </div><!-- /gallery-grid -->
+
+      </div>
+    </section>
+
+    <!-- ========== LIGHTBOX ========== -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox preview">
+      <button class="lightbox-close" aria-label="Close lightbox (or press Escape)">✕</button>
+      <div class="lightbox-content" aria-live="polite"></div>
+    </div>
+
+    <!-- ========== BEHIND THE SCENES ========== -->
+    <section class="about section-pad" id="behind-scenes" aria-labelledby="bts-heading">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-subtitle">Behind the Scenes</span>
+          <h2 class="section-title" id="bts-heading">The Magic Before the Oven</h2>
+          <p class="section-desc">Every beautiful product starts with careful hands, quality ingredients and a whole lot of love.</p>
+        </div>
+
+        <div class="about-inner">
+
+          <!-- Image side -->
+          <div class="about-img-grid reveal-left">
+            <div class="about-img-main" style="font-size:6rem;display:flex;align-items:center;justify-content:center;" aria-hidden="true"><img src="assets/baker1.jpg" alt=""></div>
+            <div class="about-img-sm"   style="font-size:4rem;display:flex;align-items:center;justify-content:center;" aria-hidden="true"><img src="assets/choclate.jpg" alt=""></div>
+            <div class="about-img-sm"   style="font-size:4rem;display:flex;align-items:center;justify-content:center;" aria-hidden="true"><img src="assets/o.jpg" alt=""></div>
+            <div class="about-badge-float">
+              <strong>4 AM</strong>
+              <span>We Start Baking</span>
+            </div>
+          </div>
+
+          <!-- Text side -->
+          <div class="about-content reveal-right">
+            <span class="section-subtitle">Our Process</span>
+            <h3 class="section-title" style="font-size:2rem;">From Ingredients to Art</h3>
+            <p style="color:var(--text-mid);margin-bottom:1.2rem;font-size:.96rem;line-height:1.9;">
+              Our bakers arrive at 4 AM each morning to begin preparing the day's fresh batches. Everything starts
+              from scratch — flour is measured, butter is softened, fruit is sliced, flavours are balanced to
+              achieve our signature taste.
+            </p>
+            <p style="color:var(--text-light);margin-bottom:2rem;font-size:.92rem;line-height:1.9;">
+              By the time our shop opens at 8 AM, the aroma of fresh baking already fills the neighbourhood.
+              No frozen ingredients. No pre‑made mixes. Just pure, honest craftsmanship in every single bite.
+            </p>
+            <a href="order.html" class="btn btn-primary">Order Your Creation →</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== SECOND GALLERY ROW ========== -->
+    <section class="gallery-section section-pad-sm" aria-labelledby="more-heading">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-subtitle">More Creations</span>
+          <h2 class="section-title" id="more-heading">Every Slice Tells a Story</h2>
+        </div>
+
+        <!-- Second gallery grid with different layout -->
+        <div class="gallery-grid reveal" style="grid-auto-rows:180px;" role="list" aria-label="More bakery photos">
+
+          <div class="gallery-item" data-emoji="🍫" role="listitem" tabindex="0" aria-label="Open: Dark chocolate truffles"><img src="assets/Cookie.jpg" alt=""></div>
+          <div class="gallery-item" data-emoji="🥂" role="listitem" tabindex="0" aria-label="Open: Celebration cake toasts"><img src="assets/g d.jpg" alt=""></div>
+          <div class="gallery-item" data-emoji="🌸" role="listitem" tabindex="0" aria-label="Open: Floral decorated cake"><img src="assets/Red Velvet Cupcakes.jpg" alt=""></div>
+          <div class="gallery-item" data-emoji="🍩" role="listitem" tabindex="0" aria-label="Open: Glazed doughnuts"><img src="assets/g f.jpg" alt=""></div>
+          <div class="gallery-item" data-emoji="🎁" role="listitem" tabindex="0" aria-label="Open: Gift box cake"><img src="assets/g c.jpg" alt=""></div>
+          <div class="gallery-item" data-emoji="🌈" role="listitem" tabindex="0" aria-label="Open: Rainbow layer cake"><img src="assets/rainbow cake.jpg" alt=""></div>
+          <div class="gallery-item" data-emoji="🍑" role="listitem" tabindex="0" aria-label="Open: Peach tart"><img src="assets/g b.jpg" alt=""></div>
+          <div class="gallery-item" data-emoji="⭐" role="listitem" tabindex="0" aria-label="Open: Star decorated cookies"><img src="assets/g e.jpg" alt=""></div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS STRIP ========== -->
+    <section class="testimonials section-pad" aria-labelledby="reviews-heading">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-subtitle">Customer Reviews</span>
+          <h2 class="section-title" id="reviews-heading">They Loved What They Saw</h2>
+          <p class="section-desc">Our gallery speaks for itself, but our customers say it best.</p>
+        </div>
+
+        <div class="testimonials-slider reveal">
+          <div class="testimonials-track">
+
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+                <p class="testimonial-text">
+                  "Ordered a 3-tier wedding cake and it was the most stunning centrepiece at our reception.
+                  The team was so patient and professional. Absolutely recommend Sweet Crumbs!"
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-avatar" aria-hidden="true">M</div>
+                  <div>
+                    <div class="author-name">Maryam &amp; Asad</div>
+                    <div class="author-role">Wedding Couple, Karachi</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+                <p class="testimonial-text">
+                  "The gallery doesn't do justice — in person every cake is even more beautiful.
+                  Our daughter's birthday cake brought tears to our eyes. Pure artistry!"
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-avatar" aria-hidden="true">F</div>
+                  <div>
+                    <div class="author-name">Farrukh Ahmed</div>
+                    <div class="author-role">Loyal Customer</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+                <p class="testimonial-text">
+                  "We ordered 200 cupcakes for our company event — beautifully packed, on time and
+                  everyone loved them. Sweet Crumbs is our official corporate bakery now!"
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-avatar" aria-hidden="true">R</div>
+                  <div>
+                    <div class="author-name">Rabia Javed</div>
+                    <div class="author-role">Events Manager, Karachi</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /testimonials-track -->
+
+          <div class="slider-controls">
+            <button class="slider-btn prev" aria-label="Previous review">←</button>
+            <div class="slider-dots" role="tablist">
+              <button class="slider-dot active" role="tab" aria-label="Review 1" aria-selected="true"></button>
+              <button class="slider-dot"        role="tab" aria-label="Review 2" aria-selected="false"></button>
+              <button class="slider-dot"        role="tab" aria-label="Review 3" aria-selected="false"></button>
+            </div>
+            <button class="slider-btn next" aria-label="Next review">→</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== NEWSLETTER ========== -->
+    <section class="newsletter section-pad-sm" aria-labelledby="newsletter-heading">
+      <div class="newsletter-inner">
+        <span class="section-subtitle">Follow Our Journey</span>
+        <h2 class="section-title" id="newsletter-heading">Get Inspired Daily</h2>
+        <p class="section-desc">Subscribe to receive weekly gallery updates, new creations and behind‑the‑scenes content.</p>
+        <form class="newsletter-form" novalidate aria-label="Newsletter subscription">
+          <input type="email" class="newsletter-input" placeholder="Your email address" aria-label="Email address" required />
+          <button type="submit" class="btn btn-gold">Subscribe 🎉</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+
+        <div>
+          <a href="index.html" class="nav-logo" style="display:inline-flex;gap:10px;align-items:center;margin-bottom:1rem;" aria-label="Sweet Crumbs Bakery">
+            <div class="nav-logo-icon" style="width:38px;height:38px;" aria-hidden="true">🧁</div>
+            <div class="nav-logo-text">Sweet Crumbs <small>Bakery</small></div>
+          </a>
+          <p class="footer-brand-desc">Handcrafted baked goods made fresh daily with love, premium ingredients and a whole lot of passion. Serving Karachi since 2016.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">f</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="TikTok">♪</a>
+            <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Quick Links</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+           
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Our Products</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="menu.html?cat=cakes">Cakes</a></li>
+            <li><a href="menu.html?cat=cupcakes">Cupcakes</a></li>
+            <li><a href="menu.html?cat=cookies">Cookies</a></li>
+            <li><a href="menu.html?cat=bread">Artisan Bread</a></li>
+            <li><a href="menu.html?cat=pastries">Pastries</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Visit Us</h3>
+          <address class="footer-hours" style="font-style:normal;">
+            <p><strong>Address:</strong><br/>Shop 12, Bahadurabad, Karachi</p>
+            <p><strong>Phone:</strong><br/><a href="tel:+923001234567" style="color:var(--gold-light);">+92 300 123 4567</a></p>
+            <p><strong>Hours:</strong><br/>Mon–Sat: 8 AM – 9 PM<br/>Sunday: 9 AM – 7 PM</p>
+          </address>
+        </div>
+
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;width:100%;">
+        <p>© 2024 Sweet Crumbs Bakery. All rights reserved.</p>
+        <p>Made with ❤️ in Karachi</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

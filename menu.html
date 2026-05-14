@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Sweet Crumbs Bakery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/tabler-icons.min.css"/>
+<style>
+/* ── RESET & BASE ─────────────────────────────────── */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#fdf6ef;
+  --cream2:#f5ece0;
+  --brown:#4a2c1a;
+  --brown-mid:#7b4f2e;
+  --brown-light:#c8a07a;
+  --pink:#f2b8c0;
+  --pink-light:#fbe8ec;
+  --gold:#d4a853;
+  --white:#fff;
+  --text:#2d1a0e;
+  --text2:#7a5c45;
+  --border:#e8d8ca;
+  --green:#25d366;
+  --green-dark:#1ebe5d;
+  --radius:14px;
+  --radius-sm:8px;
+  --shadow:0 2px 16px rgba(74,44,26,.10);
+  --shadow-lg:0 8px 40px rgba(74,44,26,.14);
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--cream);
+  color:var(--text);
+  min-height:100vh;
+}
+
+/* ── NAVBAR ───────────────────────────────────────── */
+.navbar{
+  position:sticky;top:0;z-index:200;
+  background:rgba(253,246,239,.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  padding:0 2rem;
+  display:flex;align-items:center;justify-content:space-between;
+  height:64px;
+}
+.nav-brand{
+  display:flex;align-items:center;gap:10px;
+  text-decoration:none;
+}
+.nav-logo{
+  width:40px;height:40px;border-radius:50%;
+  background:linear-gradient(135deg,var(--brown-mid),var(--gold));
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:20px;flex-shrink:0;
+  box-shadow:0 2px 8px rgba(123,79,46,.35);
+}
+.nav-title{
+  font-family:'Playfair Display',serif;
+  font-size:18px;font-weight:700;
+  color:var(--brown);
+}
+.nav-title span{color:var(--gold)}
+.nav-links{
+  display:flex;align-items:center;gap:2px;
+  list-style:none;
+}
+.nav-links a{
+  text-decoration:none;
+  font-size:13.5px;font-weight:500;
+  color:var(--text2);
+  padding:6px 14px;
+  border-radius:var(--radius-sm);
+  transition:all .18s;
+}
+.nav-links a:hover{background:var(--cream2);color:var(--brown)}
+.nav-links a.active{background:var(--brown);color:#fff}
+.nav-cart{
+  display:flex;align-items:center;gap:7px;
+  padding:8px 16px;
+  border-radius:var(--radius-sm);
+  border:1.5px solid var(--border);
+  background:var(--white);
+  cursor:pointer;
+  font-size:13.5px;font-weight:600;
+  color:var(--brown);
+  transition:all .18s;
+  position:relative;
+}
+.nav-cart:hover{border-color:var(--brown-light);background:var(--cream2)}
+.nav-cart-badge{
+  background:var(--green);color:#fff;
+  border-radius:50%;width:20px;height:20px;
+  font-size:11px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+.hamburger{display:none;background:none;border:none;cursor:pointer;font-size:22px;color:var(--brown);padding:4px}
+@media(max-width:680px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+}
+
+/* ── HERO ─────────────────────────────────────────── */
+.hero{
+  background:linear-gradient(135deg,var(--brown) 0%,var(--brown-mid) 60%,#c8714a 100%);
+  color:#fff;
+  text-align:center;
+  padding:3.5rem 1.5rem 3rem;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-tag{
+  display:inline-block;
+  background:rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:100px;
+  padding:5px 18px;
+  font-size:12px;font-weight:600;
+  letter-spacing:.06em;text-transform:uppercase;
+  margin-bottom:14px;
+}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(28px,5vw,46px);
+  font-weight:700;margin-bottom:10px;
+  line-height:1.2;
+}
+.hero p{
+  font-size:15px;opacity:.85;max-width:480px;margin:0 auto 22px;
+  line-height:1.6;
+}
+.hero-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;color:var(--brown);
+  padding:11px 26px;border-radius:var(--radius-sm);
+  font-weight:600;font-size:14px;text-decoration:none;
+  box-shadow:0 4px 20px rgba(0,0,0,.2);
+  transition:all .2s;
+}
+.hero-cta:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(0,0,0,.28)}
+
+/* ── SECTIONS ─────────────────────────────────────── */
+.section{padding:3rem 1.5rem;max-width:1140px;margin:0 auto}
+.section-head{
+  display:flex;align-items:baseline;gap:14px;
+  margin-bottom:1.5rem;
+}
+.section-head h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(20px,3vw,28px);font-weight:700;
+  color:var(--brown);
+}
+.section-head .line{
+  flex:1;height:1.5px;
+  background:linear-gradient(90deg,var(--border),transparent);
+}
+
+/* ── ORDER / MENU PAGE ────────────────────────────── */
+#menu{background:var(--cream)}
+.menu-wrap{
+  display:grid;
+  grid-template-columns:1fr 360px;
+  gap:1.5rem;align-items:start;
+}
+@media(max-width:800px){.menu-wrap{grid-template-columns:1fr}}
+
+/* Controls */
+.controls{display:flex;gap:10px;margin-bottom:1.2rem;flex-wrap:wrap}
+.search-wrap{flex:1;min-width:140px;position:relative}
+.search-wrap i{position:absolute;left:11px;top:50%;transform:translateY(-50%);font-size:17px;color:var(--text2);pointer-events:none}
+.search-wrap input{
+  width:100%;padding:10px 12px 10px 38px;
+  font-size:14px;font-family:'DM Sans',sans-serif;
+  border-radius:var(--radius-sm);
+  border:1.5px solid var(--border);
+  background:var(--white);color:var(--text);
+  transition:border .18s;
+}
+.search-wrap input:focus{outline:none;border-color:var(--brown-light)}
+.filter-tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tab{
+  padding:7px 15px;border-radius:var(--radius-sm);
+  border:1.5px solid var(--border);
+  background:var(--white);
+  font-size:13px;font-family:'DM Sans',sans-serif;font-weight:500;
+  cursor:pointer;color:var(--text2);
+  transition:all .18s;white-space:nowrap;
+}
+.tab:hover{border-color:var(--brown-light);color:var(--brown)}
+.tab.active{background:var(--brown);color:#fff;border-color:var(--brown)}
+
+/* Product Grid */
+.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:1rem}
+.product-card{
+  background:var(--white);
+  border:1.5px solid var(--border);
+  border-radius:var(--radius);
+  overflow:hidden;
+  transition:all .2s;
+  cursor:default;
+}
+.product-card:hover{border-color:var(--brown-light);box-shadow:var(--shadow)}
+.product-card.in-cart{border-color:var(--green);box-shadow:0 0 0 2px rgba(37,211,102,.15)}
+
+/* ── PRODUCT IMAGE BOX ────────────────────────────── */
+/* 
+  👇 YAHAN APNI IMAGES ADD KAREIN
+  Har product ki img tag is box mein aati hai.
+  Product JS mein img:"images/cake.jpg" set karein.
+  Agar img blank ho to placeholder background show hoga.
+*/
+.product-img{
+  width:100%;
+  aspect-ratio:4/3;
+  overflow:hidden;
+  background:var(--cream2);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;
+}
+.product-img img{
+  width:100%;height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .35s;
+}
+.product-card:hover .product-img img{transform:scale(1.05)}
+/* Placeholder jab image na ho */
+.product-img .img-placeholder{
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+  color:var(--brown-light);font-size:12px;font-weight:500;
+}
+.product-img .img-placeholder i{font-size:36px;opacity:.5}
+
+.product-body{padding:12px}
+.product-tag{
+  display:inline-block;font-size:11px;font-weight:600;
+  padding:2px 9px;border-radius:100px;margin-bottom:7px;
+}
+.tag-veg{background:#e8f5e9;color:#2e7d32}
+.tag-non-veg{background:#fce4ec;color:#c62828}
+.tag-special{background:#ede7f6;color:#4527a0}
+.product-name{font-size:14px;font-weight:600;color:var(--brown);margin-bottom:4px;line-height:1.3}
+.product-desc{font-size:12px;color:var(--text2);margin-bottom:10px;line-height:1.5}
+.product-footer{display:flex;align-items:center;justify-content:space-between;gap:6px}
+.product-price{font-size:15px;font-weight:700;color:var(--brown);font-family:'Playfair Display',serif}
+.add-btn{
+  display:flex;align-items:center;gap:5px;
+  padding:6px 12px;border-radius:var(--radius-sm);
+  border:1.5px solid var(--border);
+  background:var(--white);
+  cursor:pointer;font-size:13px;font-weight:600;font-family:'DM Sans',sans-serif;
+  color:var(--brown);transition:all .18s;white-space:nowrap;
+}
+.add-btn:hover{background:var(--brown);color:#fff;border-color:var(--brown)}
+.qty-ctrl{display:flex;align-items:center;gap:6px}
+.qty-btn{
+  width:28px;height:28px;border-radius:var(--radius-sm);
+  border:1.5px solid var(--border);background:var(--white);
+  cursor:pointer;font-size:16px;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--brown);transition:all .18s;font-weight:700;
+}
+.qty-btn:hover{background:var(--brown);color:#fff;border-color:var(--brown)}
+.qty-num{font-size:14px;font-weight:700;min-width:18px;text-align:center;color:var(--brown)}
+.empty-state{
+  grid-column:1/-1;padding:3rem;text-align:center;
+  color:var(--text2);font-size:14px;
+}
+
+/* ── CART PANEL ───────────────────────────────────── */
+.cart-panel{
+  background:var(--white);
+  border:1.5px solid var(--border);
+  border-radius:var(--radius);
+  padding:1.25rem;
+  display:flex;flex-direction:column;gap:1rem;
+  position:sticky;top:76px;
+  max-height:calc(100vh - 96px);
+  overflow-y:auto;
+  box-shadow:var(--shadow);
+}
+@media(max-width:800px){
+  .cart-panel{
+    position:fixed;inset:0;z-index:300;
+    border-radius:0;max-height:100%;
+    display:none;
+    overflow-y:auto;
+  }
+  .cart-panel.open{display:flex;flex-direction:column}
+}
+.cart-header{display:flex;align-items:center;justify-content:space-between}
+.cart-title{font-size:16px;font-weight:700;color:var(--brown);display:flex;align-items:center;gap:8px;font-family:'Playfair Display',serif}
+.cart-clear{
+  font-size:12px;font-weight:500;color:var(--text2);cursor:pointer;
+  padding:4px 10px;border-radius:var(--radius-sm);
+  border:1px solid var(--border);background:none;
+  font-family:'DM Sans',sans-serif;transition:all .18s;
+}
+.cart-clear:hover{background:var(--cream2);color:var(--brown)}
+.mobile-close-row{
+  display:none;align-items:center;justify-content:space-between;
+  padding-bottom:12px;border-bottom:1px solid var(--border);
+}
+@media(max-width:800px){.mobile-close-row{display:flex}}
+.customer-block{display:flex;flex-direction:column;gap:6px}
+.customer-label{font-size:12px;font-weight:600;color:var(--text2)}
+.customer-input{
+  padding:9px 12px;border-radius:var(--radius-sm);
+  border:1.5px solid var(--border);
+  background:var(--white);color:var(--text);
+  font-size:14px;font-family:'DM Sans',sans-serif;
+  transition:border .18s;
+}
+.customer-input:focus{outline:none;border-color:var(--brown-light)}
+.cart-items{display:flex;flex-direction:column}
+.cart-empty{
+  padding:2rem;text-align:center;color:var(--text2);
+  font-size:13px;
+  border:1.5px dashed var(--border);
+  border-radius:var(--radius-sm);
+}
+.cart-item{
+  display:flex;align-items:center;gap:10px;
+  padding:10px 0;border-bottom:1px solid var(--border);
+}
+.cart-item:last-child{border-bottom:none}
+.cart-item-thumb{
+  width:38px;height:38px;border-radius:8px;
+  overflow:hidden;background:var(--cream2);flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+}
+.cart-item-thumb img{width:100%;height:100%;object-fit:cover}
+.cart-item-thumb .ti{font-size:18px;color:var(--brown-light)}
+.cart-item-info{flex:1;min-width:0}
+.cart-item-name{font-size:13px;font-weight:600;color:var(--brown);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cart-item-price{font-size:11px;color:var(--text2)}
+.cart-item-right{display:flex;align-items:center;gap:7px;flex-shrink:0}
+.cqb{
+  width:24px;height:24px;border-radius:6px;
+  border:1.5px solid var(--border);background:var(--white);
+  cursor:pointer;font-size:14px;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--brown);transition:all .18s;
+}
+.cqb:hover{background:var(--brown);color:#fff;border-color:var(--brown)}
+.cqb.del{border-color:#fecaca;color:#dc2626}
+.cqb.del:hover{background:#dc2626;color:#fff;border-color:#dc2626}
+.cart-item-qty{font-size:13px;font-weight:700;min-width:16px;text-align:center;color:var(--brown)}
+.cart-item-total{font-size:13px;font-weight:700;color:var(--brown);min-width:52px;text-align:right}
+.cart-totals{
+  display:flex;flex-direction:column;gap:7px;
+  padding-top:4px;border-top:1px solid var(--border);
+}
+.totals-row{display:flex;justify-content:space-between;font-size:13px;color:var(--text2)}
+.totals-row.grand{
+  font-size:16px;font-weight:700;color:var(--brown);
+  padding-top:7px;border-top:1px solid var(--border);
+  font-family:'Playfair Display',serif;
+}
+.wa-btn{
+  width:100%;padding:13px;border-radius:var(--radius-sm);
+  border:none;background:var(--green);color:#fff;
+  font-size:15px;font-weight:700;font-family:'DM Sans',sans-serif;
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:9px;
+  transition:all .2s;letter-spacing:.01em;
+}
+.wa-btn:hover{background:var(--green-dark);transform:translateY(-1px);box-shadow:0 4px 16px rgba(37,211,102,.35)}
+.wa-btn:disabled{opacity:.4;cursor:not-allowed;transform:none;box-shadow:none}
+.cart-note{font-size:11px;color:var(--text2);text-align:center;line-height:1.6}
+
+/* ── GALLERY SECTION ──────────────────────────────── */
+#gallery{background:var(--cream2)}
+/*
+  ════════════════════════════════════════════
+  📸 GALLERY — YAHAN APNI TASVEEREIN LAGAYEIN
+  ════════════════════════════════════════════
+  Neeche .gallery-grid ke andar har
+  .gallery-item mein <img> tag hai.
+  src="" mein apni image ka path daalein.
+  Example: src="images/myphoto.jpg"
+  ════════════════════════════════════════════
+*/
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:1rem;
+}
+.gallery-item{
+  border-radius:var(--radius);
+  overflow:hidden;
+  aspect-ratio:4/3;
+  background:var(--cream);
+  border:1.5px solid var(--border);
+  position:relative;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;
+  transition:all .25s;
+}
+.gallery-item:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.gallery-item img{
+  width:100%;height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .35s;
+}
+.gallery-item:hover img{transform:scale(1.06)}
+/* Placeholder agar image na ho */
+.gallery-item .gal-placeholder{
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  color:var(--brown-light);
+}
+.gallery-item .gal-placeholder i{font-size:40px;opacity:.45}
+.gallery-item .gal-placeholder span{font-size:12px;font-weight:500}
+.gallery-label{
+  position:absolute;bottom:0;left:0;right:0;
+  background:linear-gradient(transparent,rgba(74,44,26,.75));
+  color:#fff;padding:28px 12px 10px;
+  font-size:12px;font-weight:600;
+  opacity:0;transition:opacity .25s;
+}
+.gallery-item:hover .gallery-label{opacity:1}
+
+/* ── ABOUT SECTION ────────────────────────────────── */
+#about{background:var(--white)}
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2.5rem;align-items:center;
+}
+@media(max-width:700px){.about-grid{grid-template-columns:1fr}}
+.about-img-box{
+  border-radius:var(--radius);
+  overflow:hidden;
+  aspect-ratio:4/3;
+  background:var(--cream2);
+  border:1.5px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+}
+/* 📸 About section ki image yahan */
+.about-img-box img{width:100%;height:100%;object-fit:cover;display:block}
+.about-img-box .ab-placeholder{
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  color:var(--brown-light);
+}
+.about-img-box .ab-placeholder i{font-size:56px;opacity:.4}
+.about-img-box .ab-placeholder span{font-size:13px}
+.about-text h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(22px,3.5vw,32px);
+  color:var(--brown);margin-bottom:14px;line-height:1.25;
+}
+.about-text p{font-size:15px;color:var(--text2);line-height:1.75;margin-bottom:16px}
+.about-tags{display:flex;flex-wrap:wrap;gap:8px}
+.about-tag{
+  display:flex;align-items:center;gap:6px;
+  padding:7px 14px;border-radius:100px;
+  background:var(--cream2);border:1px solid var(--border);
+  font-size:13px;font-weight:500;color:var(--brown);
+}
+.about-tag i{color:var(--gold)}
+
+/* ── CONTACT SECTION ──────────────────────────────── */
+#contact{background:var(--cream)}
+.contact-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.contact-card{
+  background:var(--white);
+  border:1.5px solid var(--border);
+  border-radius:var(--radius);
+  padding:1.4rem;
+  display:flex;align-items:flex-start;gap:14px;
+  transition:all .2s;
+}
+.contact-card:hover{border-color:var(--brown-light);box-shadow:var(--shadow)}
+.contact-icon{
+  width:44px;height:44px;border-radius:50%;
+  background:linear-gradient(135deg,var(--pink-light),var(--cream2));
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;color:var(--brown-mid);flex-shrink:0;
+}
+.contact-info h4{font-size:13px;font-weight:600;color:var(--brown);margin-bottom:4px}
+.contact-info p{font-size:13px;color:var(--text2);line-height:1.5}
+.contact-info a{color:var(--green);text-decoration:none;font-weight:600}
+.contact-info a:hover{text-decoration:underline}
+
+/* ── FOOTER ───────────────────────────────────────── */
+footer{
+  background:var(--brown);color:rgba(255,255,255,.8);
+  text-align:center;padding:1.5rem;
+  font-size:13px;line-height:1.7;
+}
+footer strong{color:var(--gold)}
+
+/* ── TOAST ────────────────────────────────────────── */
+.toast{
+  position:fixed;bottom:1.5rem;left:50%;
+  transform:translateX(-50%) translateY(20px);
+  background:var(--brown);color:#fff;
+  border-radius:var(--radius-sm);
+  padding:10px 20px;font-size:13px;font-weight:500;
+  font-family:'DM Sans',sans-serif;
+  box-shadow:0 4px 20px rgba(0,0,0,.2);
+  opacity:0;pointer-events:none;
+  transition:all .25s;z-index:500;
+  white-space:nowrap;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ── LIGHTBOX ─────────────────────────────────────── */
+.lightbox{
+  position:fixed;inset:0;z-index:999;
+  background:rgba(0,0,0,.88);
+  display:none;align-items:center;justify-content:center;
+  padding:1rem;
+}
+.lightbox.open{display:flex}
+.lightbox img{max-width:90vw;max-height:85vh;border-radius:var(--radius);object-fit:contain}
+.lightbox-close{
+  position:absolute;top:18px;right:22px;
+  background:rgba(255,255,255,.15);border:none;
+  color:#fff;font-size:22px;cursor:pointer;
+  width:40px;height:40px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  transition:background .18s;
+}
+.lightbox-close:hover{background:rgba(255,255,255,.3)}
+</style>
+</head>
+<body>
+
+<!-- ══ NAVBAR ═══════════════════════════════════════ -->
+<nav class="navbar">
+  <a class="nav-brand" href="#home">
+    <div class="nav-logo"><i class="ti ti-cake"></i></div>
+    <span class="nav-title">Sweet Crumbs <span>Bakery</span></span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="menu.html" class="active">Menu</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+  <button class="nav-cart" id="cartToggle" aria-label="Open cart">
+    <i class="ti ti-shopping-cart"></i>
+    Cart
+    <span class="nav-cart-badge" id="cartCount">0</span>
+  </button>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <i class="ti ti-menu-2"></i>
+  </button>
+</nav>
+
+
+<!-- ══ HERO ═════════════════════════════════════════ -->
+<section id="home">
+  <div class="hero">
+    <div class="hero-tag">🍰 Fresh Every Day</div>
+    <h1>Baked with Love,<br/>Delivered with Joy</h1>
+    <p>Order your favourite cakes, pastries & breads — directly via WhatsApp. Fresh & delivered to your door.</p>
+    <a href="menu.html" class="hero-cta">
+      <i class="ti ti-shopping-bag"></i> Order Now
+    </a>
+  </div>
+</section>
+
+
+<!-- ══ ABOUT ════════════════════════════════════════ -->
+<section id="about">
+  <div class="section">
+    <div class="section-head">
+      <h2>About Us</h2>
+      <div class="line"></div>
+    </div>
+    <div class="about-grid">
+
+      <!-- 📸 About section image — src mein apna path daalein -->
+      <div class="about-img-box">
+      <img src="assets/n.jpg" alt="">
+        <div class="ab-placeholder">
+          <i class="ti ti-camera"></i>
+          <span><br/><code></code></span>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <h2>Our Story & Passion for Baking</h2>
+        <p>Sweet Crumbs Bakery was founded with one simple belief — that every bite should feel like a warm hug. We use the finest ingredients, time-tested recipes, and a whole lot of love in every product we make.</p>
+        <p>From fluffy sourdough loaves to celebration cakes crafted for your special moments, our goal is to make fresh, artisan bakery accessible to everyone.</p>
+        <div class="about-tags">
+          <span class="about-tag"><i class="ti ti-star-filled"></i> Premium Ingredients</span>
+          <span class="about-tag"><i class="ti ti-heart-filled"></i> Made with Love</span>
+          <span class="about-tag"><i class="ti ti-truck-delivery"></i> Home Delivery</span>
+          <span class="about-tag"><i class="ti ti-clock"></i> Fresh Daily</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ MENU / ORDER ══════════════════════════════════ -->
+<section id="menu">
+  <div class="section">
+    <div class="section-head">
+      <h2>Our Menu — Order via WhatsApp</h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="menu-wrap">
+
+      <!-- ── LEFT: Product listing ── -->
+      <div>
+        <div class="controls">
+          <div class="search-wrap">
+            <i class="ti ti-search"></i>
+            <input type="search" id="searchInput" placeholder="Search products…" aria-label="Search products"/>
+          </div>
+          <div class="filter-tabs">
+            <button class="tab active" data-cat="all">All</button>
+            <button class="tab" data-cat="Cakes">Cakes</button>
+            <button class="tab" data-cat="Bakery">Bakery</button>
+            <button class="tab" data-cat="Drinks">Drinks</button>
+            <button class="tab" data-cat="Snacks">Snacks</button>
+          </div>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+
+      <!-- ── RIGHT: Cart ── -->
+      <aside class="cart-panel" id="cartPanel">
+        <div class="mobile-close-row">
+          <span style="font-size:16px;font-weight:700;color:var(--brown);font-family:'Playfair Display',serif">Your Cart</span>
+          <button id="closeCart" style="background:none;border:none;cursor:pointer;font-size:22px;color:var(--text2)" aria-label="Close cart">
+            <i class="ti ti-x"></i>
+          </button>
+        </div>
+
+        <div class="cart-header">
+          <div class="cart-title"><i class="ti ti-shopping-bag"></i> Your Order</div>
+          <button class="cart-clear" id="clearCart">Clear all</button>
+        </div>
+
+        <div class="customer-block">
+          <label class="customer-label" for="customerName">Your name (optional)</label>
+          <input class="customer-input" type="text" id="customerName" placeholder="e.g. Ahmed Khan" autocomplete="name"/>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+          <div class="cart-empty" id="cartEmpty">
+            <i class="ti ti-basket" style="font-size:34px;display:block;margin-bottom:10px;opacity:.35"></i>
+            empty! add somrthing from menu
+          </div>
+        </div>
+
+        <div class="cart-totals" id="cartTotals" style="display:none">
+          <div class="totals-row"><span>Subtotal</span><span id="subtotal">Rs. 0</span></div>
+          <div class="totals-row"><span id="itemCountLabel">0 items</span><span style="color:var(--green);font-size:12px;font-weight:600">Free delivery</span></div>
+          <div class="totals-row grand"><span>Total</span><span id="grandTotal">Rs. 0</span></div>
+        </div>
+
+        <button class="wa-btn" id="waBtn" disabled>
+          <i class="ti ti-brand-whatsapp" style="font-size:20px"></i>
+          order on WhatsApp
+        </button>
+
+        <p class="cart-note">Your order summary will be sent via WhatsApp. We will confirm it and then process it.</p>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+  📸 GALLERY SECTION
+  ══════════════════════════════════════════════════
+  Neeche har .gallery-item mein <img> tag hai.
+  src="" ki jagah apni image ka path likhein:
+    src="images/gallery1.jpg"
+  Caption ke liye .gallery-label ka text badlein.
+  Aur aap aur items copy-paste kar ke add kar sakte hain!
+══════════════════════════════════════════════════ -->
+<section id="gallery" style="padding:3rem 0">
+  <div class="section">
+    <div class="section-head">
+      <h2>Gallery</h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="gallery-grid">
+
+      <!-- ── Gallery Item 1 ── -->
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <!--
+          ✏️  src="images/gallery1.jpg"  likhein
+        -->
+        <img src="assets/choclate triffle.jpg" alt="Chocolate Cake">
+        <div class="gal-placeholder">
+          <i class="ti ti-camera"></i>
+        </div>
+        <div class="gallery-label">Chocolate Truffle Cake</div>
+      </div>
+
+
+
+      <!-- ── Gallery Item 2 ── -->
+<div class="gallery-item" onclick="openLightbox(this)">
+  
+  <img src="assets/download.jpg">
+
+  <div class="gal-placeholder">
+    <i class="ti ti-photo"></i>
+    <span><br/><code></code></span>
+  </div>
+  <div class="gallery-label">Red Velvet Cake</div>
+</div>
+
+      <!-- ── Gallery Item 3 ── -->
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="" alt="Croissant"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <div class="gal-placeholder">
+          <i class="ti ti-photo"></i>
+          <span><br/><code><img src="assets/Butter-Croissant.jpg" alt=""></code></span>
+        </div>
+        <div class="gallery-label">Butter Croissants</div>
+      </div>
+
+      <!-- ── Gallery Item 4 ── -->
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="" alt="Macarons"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <div class="gal-placeholder">
+          <i class="ti ti-photo"></i>
+          <span><br/><code><img src="assets/French-Macarons.jpg" alt=""></code></span>
+        </div>
+        <div class="gallery-label">French Macarons</div>
+      </div>
+
+      <!-- ── Gallery Item 5 ── -->
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="" alt="Sourdough"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <div class="gal-placeholder">
+          <i class="ti ti-photo"></i>
+          <span><br/><code><img src="assets/Classic-Sourdough.jpg" alt=""></code></span>
+        </div>
+        <div class="gallery-label">Classic Sourdough</div>
+      </div>
+
+      <!-- ── Gallery Item 6 ── -->
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="" alt="Cupcakes"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <div class="gal-placeholder">
+          <i class="ti ti-photo"></i>
+          <span><br/><code><img src="assets/Chocolate Fudge Cupcakes.jpg" alt=""></code></span>
+        </div>
+        <div class="gallery-label">Vanilla Cupcakes</div>
+      </div>
+
+      <!--
+        ✅ AUR ITEMS ADD KARNE KE LIYE:
+        Neeche wala block copy-paste karein:
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/meri-photo.jpg" alt="Description"/>
+          <div class="gallery-label">Caption yahan</div>
+        </div>
+      -->
+
+    </div><!-- /gallery-grid -->
+  </div>
+</section>
+
+
+<!-- ══ CONTACT ═══════════════════════════════════════ -->
+<section id="contact">
+  <div class="section">
+    <div class="section-head">
+      <h2>Contact Us</h2>
+      <div class="line"></div>
+    </div>
+    <div class="contact-cards">
+      <div class="contact-card">
+        <div class="contact-icon"><i class="ti ti-brand-whatsapp"></i></div>
+        <div class="contact-info">
+          <h4>WhatsApp Orders</h4>
+          <p><a href="https://wa.me/923427672545">+92 342 7672545</a><br/>Mon–Sat · 9am–9pm</p>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon"><i class="ti ti-map-pin"></i></div>
+        <div class="contact-info">
+          <h4>Our Bakery</h4>
+          <p>Street #5, DHA Phase 2<br/>Karachi, Pakistan</p>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon"><i class="ti ti-clock"></i></div>
+        <div class="contact-info">
+          <h4>Opening Hours</h4>
+          <p>Mon – Sat: 8am – 10pm<br/>Sunday: 9am – 6pm</p>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon"><i class="ti ti-mail"></i></div>
+        <div class="contact-info">
+          <h4>Email Us</h4>
+          <p><a href="mailto:hello@sweetcrumbs.pk">hello@sweetcrumbs.pk</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ FOOTER ════════════════════════════════════════ -->
+<footer>
+  <strong>Sweet Crumbs Bakery</strong> — Baked with Love 🍰<br/>
+  © 2025 All rights reserved. Developed by <strong>Ajmaeen</strong>
+</footer>
+
+
+<!-- ══ LIGHTBOX ══════════════════════════════════════ -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()"><i class="ti ti-x"></i></button>
+  <img id="lightboxImg" src="" alt=""/>
+</div>
+
+
+<!-- ══ TOAST ═════════════════════════════════════════ -->
+<div class="toast" id="toast"></div>
+
+
+<!-- ══════════════════════════════════════════════════
+  PRODUCTS DATA
+  ══════════════════════════════════════════════════
+  Har product mein:
+    img: "images/cake.jpg"    ← apni image ka path
+  Agar img blank ho ("") to placeholder show hoga.
+══════════════════════════════════════════════════ -->
+<script>
+const PHONE = '92427672545'; // ← apna WhatsApp number yahan
+
+/*
+  ══════════════════════════════════════════════════
+  📋 PRODUCTS LIST — APNE PRODUCTS YAHAN ADD KAREIN
+  ══════════════════════════════════════════════════
+  img: "images/apni-image.jpg"  likhein
+  Agar image nahi hai to img:"" chhod dein
+  ══════════════════════════════════════════════════
+*/
+const PRODUCTS = [
+  {id:1,  name:'Chocolate Truffle Cake',    desc:'Rich dark chocolate with silky ganache',              price:2500, img:'assets/choclate triffle.jpg',  cat:'Cakes',  tag:'special'},
+  {id:2,  name:'Red Velvet Cake',           desc:'Classic red velvet with cream cheese frosting',       price:2800, img:'assets/download.jpg',  cat:'Cakes',  tag:'special'},
+  {id:3,  name:'Vanilla Layer Cake',        desc:'Moist sponge with fresh cream and seasonal fruit',    price:2200, img:'assets/white.jpg',  cat:'Cakes',  tag:'veg'},
+  {id:4,  name:'Butter Croissant',          desc:'Flaky laminated pastry, baked fresh every morning',  price:250,  img:'assets/butter-croissant.jpg',  cat:'Bakery', tag:'veg'},
+  {id:5,  name:'Classic Sourdough',         desc:'Slow-fermented loaf with crackling crust',            price:650,  img:'assets/Classic-Sourdough.jpg',  cat:'Bakery', tag:'veg'},
+  {id:6,  name:'Strawberry Danish',         desc:'Cream cheese and fresh strawberry compote swirl',    price:280,  img:'assets/Strawberry-danish.jpg',  cat:'Bakery', tag:'veg'},
+  {id:7,  name:'Vanilla Cupcakes',          desc:'Fluffy sponge with swirled buttercream',             price:180,  img:'assets/Vanilla-Buttercream-Cupcakes.jpg',  cat:'Bakery', tag:'veg'},
+  {id:8,  name:'Butter Cookies (6 pcs)',    desc:'Crisp melt-in-your-mouth shortbread cookies',        price:120,  img:'assets/cookie.jpg',  cat:'Snacks', tag:'veg'},
+  {id:9,  name:'Chocolate Chip Cookies',    desc:'Chewy with dark and milk chocolate chunks',          price:150,  img:'assets/Chocolate-Chip-Cookies.jpg',  cat:'Snacks', tag:'veg'},
+  {id:10, name:'French Macarons (6 pcs)',   desc:'Delicate almond shells with ganache filling',        price:350,  img:'assets/French-Macarons.jpg',  cat:'Snacks', tag:'veg'},
+  {id:11, name:'Chocolate Éclair',          desc:'Choux pastry filled with crème pâtissière',          price:220,  img:'assets/Chocolate-Éclair.jpg',  cat:'Snacks', tag:'veg'},
+  {id:12, name:'Hot Chocolate',             desc:'Rich Belgian cocoa with steamed milk',               price:350,  img:'assets/choclate.jpg',  cat:'Drinks', tag:'veg'},
+  {id:13, name:'Fresh Orange Juice',        desc:'Freshly squeezed, no added sugar',                  price:280,  img:'assets/Fresh-Orange-Juice.jpg',  cat:'Drinks', tag:'veg'},
+  {id:14, name:'Strawberry Smoothie',       desc:'Blended with yogurt and honey',                     price:320,  img:'assets/Strawberry-Smoothie.jpg',  cat:'Drinks', tag:'veg'},
+  {id:15, name:'Rosemary Focaccia',         desc:'Olive oil flatbread with sea salt & fresh herbs',   price:420,  img:'assets/Rosemary-Focaccia.jpg',  cat:'Bakery', tag:'veg'},
+];
+
+/* ─── STATE ─────────────────────────── */
+let cart = {}, currentCat = 'all', searchQ = '';
+
+/* ─── ELEMENTS ──────────────────────── */
+const grid         = document.getElementById('productGrid');
+const cartItemsEl  = document.getElementById('cartItems');
+const cartEmpty    = document.getElementById('cartEmpty');
+const cartTotals   = document.getElementById('cartTotals');
+const countBadge   = document.getElementById('cartCount');
+const subtotalEl   = document.getElementById('subtotal');
+const grandTotalEl = document.getElementById('grandTotal');
+const itemCountEl  = document.getElementById('itemCountLabel');
+const waBtn        = document.getElementById('waBtn');
+const toastEl      = document.getElementById('toast');
+
+/* ─── HELPERS ───────────────────────── */
+function fmt(n){ return 'Rs. ' + n.toLocaleString(); }
+
+function showToast(msg){
+  toastEl.textContent = msg;
+  toastEl.classList.add('show');
+  clearTimeout(toastEl._t);
+  toastEl._t = setTimeout(() => toastEl.classList.remove('show'), 2200);
+}
+
+/* ─── RENDER PRODUCT GRID ───────────── */
+function getFiltered(){
+  return PRODUCTS.filter(p => {
+    const catOk = currentCat === 'all' || p.cat === currentCat;
+    const q     = searchQ.toLowerCase();
+    const srOk  = !q || p.name.toLowerCase().includes(q) || p.cat.toLowerCase().includes(q);
+    return catOk && srOk;
+  });
+}
+
+function renderGrid(){
+  const list = getFiltered();
+  grid.innerHTML = '';
+  if(!list.length){
+    grid.innerHTML = '<div class="empty-state"><i class="ti ti-search-off" style="font-size:36px;display:block;margin-bottom:10px;opacity:.4"></i>Koi product nahi mila.</div>';
+    return;
+  }
+  list.forEach(p => {
+    const qty   = cart[p.id]?.qty || 0;
+    const inC   = qty > 0;
+    const tLabel = p.tag==='veg' ? 'Veg' : p.tag==='non-veg' ? 'Non-veg' : 'Special';
+
+    /* ──────────────────────────────────────────────────
+       IMAGE BOX:
+       Agar p.img set hai   → <img> show hoga
+       Agar p.img khali hai → placeholder show hoga
+       Aap JS mein p.img mein path daalein, ya HTML mein
+       seedha <img src="..."> bhi likh sakte hain.
+    ──────────────────────────────────────────────────── */
+    const imgHtml = p.img
+      ? `<img src="${p.img}" alt="${p.name}" loading="lazy"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"  />
+         <div class="img-placeholder" style="display:none"><i class="ti ti-camera"></i><span>${p.cat}</span></div>`
+      : `<div class="img-placeholder"><i class="ti ti-camera"></i><span>${p.cat}</span></div>`;
+
+    const card = document.createElement('div');
+    card.className = 'product-card' + (inC ? ' in-cart' : '');
+    card.innerHTML = `
+      <div class="product-img">${imgHtml}</div>
+      <div class="product-body">
+        <span class="product-tag tag-${p.tag}">${tLabel}</span>
+        <div class="product-name">${p.name}</div>
+        <div class="product-desc">${p.desc}</div>
+        <div class="product-footer">
+          <span class="product-price">${fmt(p.price)}</span>
+          ${inC
+            ? `<div class="qty-ctrl">
+                <button class="qty-btn" data-action="dec" data-id="${p.id}">−</button>
+                <span class="qty-num">${qty}</span>
+                <button class="qty-btn" data-action="inc" data-id="${p.id}">+</button>
+               </div>`
+            : `<button class="add-btn" data-action="add" data-id="${p.id}">
+                <i class="ti ti-plus"></i> Add
+               </button>`
+          }
+        </div>
+      </div>`;
+    grid.appendChild(card);
+  });
+}
+
+/* ─── RENDER CART ───────────────────── */
+function renderCart(){
+  const ids = Object.keys(cart).filter(id => cart[id].qty > 0);
+
+  if(!ids.length){
+    cartEmpty.style.display = '';
+    cartTotals.style.display = 'none';
+    waBtn.disabled = true;
+    countBadge.textContent = '0';
+    cartItemsEl.querySelectorAll('.cart-item').forEach(el => el.remove());
+    return;
+  }
+
+  cartEmpty.style.display = 'none';
+  cartTotals.style.display = 'flex';
+  waBtn.disabled = false;
+  cartItemsEl.querySelectorAll('.cart-item').forEach(el => el.remove());
+
+  let subtotal = 0, totalQty = 0;
+  ids.forEach(id => {
+    const item = cart[id];
+    const line = item.price * item.qty;
+    subtotal += line; totalQty += item.qty;
+
+    const row = document.createElement('div');
+    row.className = 'cart-item';
+
+    /* Thumbnail in cart — same img as product */
+    const thumbHtml = item.img
+      ? `<img src="${item.img}" alt="${item.name}"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+         <i class="ti ti-cake" style="display:none"></i>`
+      : `<i class="ti ti-cake"></i>`;
+
+    row.innerHTML = `
+      <div class="cart-item-thumb">${thumbHtml}</div>
+      <div class="cart-item-info">
+        <div class="cart-item-name" title="${item.name}">${item.name}</div>
+        <div class="cart-item-price">${fmt(item.price)} each</div>
+      </div>
+      <div class="cart-item-right">
+        <div class="cart-qty-ctrl">
+          <button class="cqb del" data-action="remove" data-id="${id}" title="Remove"><i class="ti ti-trash" style="font-size:13px"></i></button>
+          <button class="cqb" data-action="cdec" data-id="${id}">−</button>
+          <span class="cart-item-qty">${item.qty}</span>
+          <button class="cqb" data-action="cinc" data-id="${id}">+</button>
+        </div>
+        <div class="cart-item-total">${fmt(line)}</div>
+      </div>`;
+    cartItemsEl.appendChild(row);
+  });
+
+  subtotalEl.textContent  = fmt(subtotal);
+  grandTotalEl.textContent = fmt(subtotal);
+  itemCountEl.textContent = totalQty + ' item' + (totalQty !== 1 ? 's' : '');
+  countBadge.textContent  = totalQty;
+}
+
+/* ─── ACTIONS ───────────────────────── */
+function addToCart(id){
+  const p = PRODUCTS.find(x => x.id === +id);
+  if(!p) return;
+  if(!cart[id]) cart[id] = {...p, qty: 0};
+  cart[id].qty++;
+  renderGrid(); renderCart();
+  showToast('✓ ' + p.name + ' added!');
+}
+function changeQty(id, delta){
+  if(!cart[id]) return;
+  cart[id].qty = Math.max(0, cart[id].qty + delta);
+  if(cart[id].qty === 0) delete cart[id];
+  renderGrid(); renderCart();
+}
+function removeItem(id){
+  const name = cart[id]?.name || 'Item';
+  delete cart[id];
+  renderGrid(); renderCart();
+  showToast(name + ' removed');
+}
+
+/* ─── EVENT DELEGATION ──────────────── */
+document.addEventListener('click', e => {
+  const btn = e.target.closest('[data-action]');
+  if(!btn) return;
+  const {action, id} = btn.dataset;
+  if(action === 'add')    addToCart(id);
+  if(action === 'inc')    changeQty(id, +1);
+  if(action === 'dec')    changeQty(id, -1);
+  if(action === 'cinc')   changeQty(id, +1);
+  if(action === 'cdec')   changeQty(id, -1);
+  if(action === 'remove') removeItem(id);
+});
+
+/* ─── CLEAR CART ────────────────────── */
+document.getElementById('clearCart').addEventListener('click', () => {
+  if(!Object.keys(cart).length) return;
+  cart = {};
+  renderGrid(); renderCart();
+  showToast('Cart cleared');
+});
+
+/* ─── FILTER TABS ───────────────────── */
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', function(){
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    this.classList.add('active');
+    currentCat = this.dataset.cat;
+    renderGrid();
+  });
+});
+
+/* ─── SEARCH ────────────────────────── */
+document.getElementById('searchInput').addEventListener('input', function(){
+  searchQ = this.value;
+  renderGrid();
+});
+
+/* ─── WHATSAPP ORDER ────────────────── */
+waBtn.addEventListener('click', () => {
+  const ids = Object.keys(cart).filter(id => cart[id].qty > 0);
+  if(!ids.length) return;
+  const name = document.getElementById('customerName').value.trim();
+  let subtotal = 0;
+  const lines = ids.map(id => {
+    const it = cart[id];
+    subtotal += it.price * it.qty;
+    return `  • ${it.name} × ${it.qty} = Rs. ${(it.price * it.qty).toLocaleString()}`;
+  }).join('\n');
+  const msg = [
+    '🧁 *New Order — Sweet Crumbs Bakery*',
+    '',
+    name ? `*Customer:* ${name}` : '*Customer:* Guest',
+    '',
+    '*Order Details:*',
+    lines,
+    '',
+    `*Total: Rs. ${subtotal.toLocaleString()}*`,
+    '',
+    'Please confirm my order. Thank you! 😊'
+  ].join('\n');
+  window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+});
+
+/* ─── MOBILE CART TOGGLE ────────────── */
+const cartPanel = document.getElementById('cartPanel');
+document.getElementById('cartToggle').addEventListener('click', () => cartPanel.classList.toggle('open'));
+document.getElementById('closeCart').addEventListener('click',  () => cartPanel.classList.remove('open'));
+
+/* ─── NAVBAR ACTIVE LINK (scroll) ────── */
+const sections = document.querySelectorAll('section[id],footer');
+const navLinks  = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if(window.scrollY >= s.offsetTop - 80) current = s.id; });
+  navLinks.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+}, {passive:true});
+
+/* ─── GALLERY LIGHTBOX ──────────────── */
+function openLightbox(item){
+  const img = item.querySelector('img');
+  if(!img || !img.src || img.style.display === 'none') return;
+  document.getElementById('lightboxImg').src = img.src;
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+}
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeLightbox(); });
+
+/* ─── INIT ──────────────────────────── */
+renderGrid();
+renderCart();
+</script>
+</body>
+</html>
